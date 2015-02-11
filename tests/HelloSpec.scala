@@ -1,6 +1,8 @@
+import org.scalaalgo._
+import org.scalaalgo.sorting._
 import org.scalatest._
 import org.scalatest.matchers.ShouldMatchers
-import org.sortex._
+import org.scalaalgo._
 
 class HelloSpec extends FlatSpec with ShouldMatchers {
   "Hello" should "have tests" in {

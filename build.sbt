@@ -1,4 +1,4 @@
-name := """scala-algo"""
+name := """org.scalaalgo"""
 
 version := "1.0"
 
