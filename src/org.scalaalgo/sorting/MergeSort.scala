@@ -1,5 +1,6 @@
 package org.scalaalgo.sorting
 
+import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
 object MergeSort extends SortingAlgorithm {
