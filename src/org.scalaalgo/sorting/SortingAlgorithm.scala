@@ -11,7 +11,7 @@ trait SortingAlgorithm {
 
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit
 
-  def swap[T](seq: Array[T], first: Int, second: Int) : Unit = {
+  protected def swap[T](seq: Array[T], first: Int, second: Int) : Unit = {
     val tmp = seq(first)
     seq(first) = seq(second)
     seq(second) = tmp

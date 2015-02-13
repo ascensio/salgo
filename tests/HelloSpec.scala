@@ -2,13 +2,6 @@ import org.scalaalgo.sorting._
 import org.scalatest._
 import org.scalatest.matchers.ShouldMatchers
 
-class HelloSpec extends FlatSpec with ShouldMatchers {
-  "Hello" should "have tests" in {
-    true should be === true
-  }
-}
-
-
 class InsertionSortSpec extends FunSuite with Matchers {
   test("Unsorted array") { InsertionSort.sortCopy(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
   test("Empty array") { InsertionSort.sortCopy(Array[Int]()) shouldEqual Array[Int]() }
@@ -72,5 +65,19 @@ class CombSortSpec extends FunSuite with Matchers {
   test("Sorted array") { CombSort.sortCopy(Array(1, 2, 3, 4, 5)) shouldEqual Array(1, 2, 3, 4, 5) }
   test("Single element array") { CombSort.sortCopy(Array(5)) shouldEqual Array(5) }
   test("Inverse ordered array") { CombSort.sortCopy(Array(5, 4, 3, 2, 1)) shouldEqual Array(1, 2, 3, 4, 5) }
+}
+
+class QuickSortSpec extends FunSuite with Matchers {
+  test("Unsorted array") { QuickSort.sortCopy(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
+  test("Empty array") { QuickSort.sortCopy(Array[Int]()) shouldEqual Array[Int]() }
+  test("Sorted array") { QuickSort.sortCopy(Array(1, 2, 3, 4, 5)) shouldEqual Array(1, 2, 3, 4, 5) }
+  test("Single element array") { QuickSort.sortCopy(Array(5)) shouldEqual Array(5) }
+  test("Inverse ordered array") { QuickSort.sortCopy(Array(5, 4, 3, 2, 1)) shouldEqual Array(1, 2, 3, 4, 5) }
+
+  test("Unsorted array (tailrec)") { QuickSort.sortCopyTailRec(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
+  test("Empty array (tailrec)") { QuickSort.sortCopyTailRec(Array[Int]()) shouldEqual Array[Int]() }
+  test("Sorted array (tailrec)") { QuickSort.sortCopyTailRec(Array(1, 2, 3, 4, 5)) shouldEqual Array(1, 2, 3, 4, 5) }
+  test("Single element array (tailrec)") { QuickSort.sortCopyTailRec(Array(5)) shouldEqual Array(5) }
+  test("Inverse ordered array (tailrec)") { QuickSort.sortCopyTailRec(Array(5, 4, 3, 2, 1)) shouldEqual Array(1, 2, 3, 4, 5) }
 }
 
