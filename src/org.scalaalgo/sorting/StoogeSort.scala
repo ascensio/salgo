@@ -1,7 +1,9 @@
 package org.scalaalgo.sorting
 
+import scala.reflect.ClassTag
+
 object StoogeSort extends SortingAlgorithm{
-  def sort[T](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
+  def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     def coreSort[T](start: Int, n: Int) : Unit = {
       if (seq(start) > seq(n - 1)) {
         this.swap(seq, start, n - 1)

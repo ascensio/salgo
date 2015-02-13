@@ -1,7 +1,9 @@
 package org.scalaalgo.sorting
 
+import scala.reflect.ClassTag
+
 object SelectionSort extends SortingAlgorithm {
-  def sort[T](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
+  def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     val n = seq.length - 1
     var current = 0
     while (current < n) {

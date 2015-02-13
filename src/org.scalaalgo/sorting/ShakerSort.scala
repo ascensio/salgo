@@ -1,7 +1,9 @@
 package org.scalaalgo.sorting
 
+import scala.reflect.ClassTag
+
 object ShakerSort extends SortingAlgorithm {
-  def sort[T](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
+  def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     var start = -1
     var end = seq.length - 2
     var swapped = false
