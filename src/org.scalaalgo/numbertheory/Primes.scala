@@ -6,10 +6,10 @@ object Primes {
       case 1 => false
       case 2 => true
       case n if n % 2 == 0 => false
-      case n => for(j <- 3 to math.sqrt(number).toInt by 1) if (number % j == 0) false
+      case n =>
+        for(j <- 3 to math.sqrt(number).toInt by 1) if (number % j == 0) false
+        true
     }
-
-    true
   }
 
   def getPrimes(numberOfPrimes: Int) : Seq[Int] = {
