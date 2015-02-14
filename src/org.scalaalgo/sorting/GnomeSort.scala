@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object GnomeSort extends SortingAlgorithm {
+object GnomeSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]): Unit = {
     var position = 1
     var last = 0

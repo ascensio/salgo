@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{BubbleSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{BubbleSort, GeneralSortingAlgorithm}
 
 class BubbleSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = BubbleSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = BubbleSort
 }

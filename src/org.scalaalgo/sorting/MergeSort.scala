@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object MergeSort extends SortingAlgorithm {
+object MergeSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     val result = this.mergeSortCore[T](seq)
     for (i <- 0 to seq.length - 1) {

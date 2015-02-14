@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{CocktailSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{CocktailSort, GeneralSortingAlgorithm}
 
 class CocktailSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = CocktailSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = CocktailSort
 }

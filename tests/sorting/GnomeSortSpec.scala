@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{GnomeSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, GnomeSort}
 
 class GnomeSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = GnomeSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = GnomeSort
 }

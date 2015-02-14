@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object HeapSort extends SortingAlgorithm {
+object HeapSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     this.heapify(seq, seq.length)
     var end = seq.length - 1

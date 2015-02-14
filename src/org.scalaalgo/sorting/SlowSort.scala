@@ -2,9 +2,9 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object SlowSort extends SortingAlgorithm{
+object SlowSort extends GeneralSortingAlgorithm{
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
-    def coreSort[T](start: Int, n: Int) : Unit = {
+    def coreSort(start: Int, n: Int) : Unit = {
       if (start >= n) return
       val m = (start + n) / 2
       coreSort(start, m)
@@ -14,7 +14,7 @@ object SlowSort extends SortingAlgorithm{
       coreSort(start, n - 1)
     }
 
-    if (!seq.isEmpty){
+    if (seq.nonEmpty){
       coreSort(0, seq.length - 1)
     }
   }

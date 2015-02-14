@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object CombSort extends SortingAlgorithm {
+object CombSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     var step = seq.length
     var exchanged = false

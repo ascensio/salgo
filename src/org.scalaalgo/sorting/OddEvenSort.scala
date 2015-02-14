@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object OddEvenSort extends SortingAlgorithm {
+object OddEvenSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     val length = seq.length - 1
     var sorted = false

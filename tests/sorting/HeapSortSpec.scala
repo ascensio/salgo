@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{HeapSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, HeapSort}
 
 class HeapSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = HeapSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = HeapSort
 }

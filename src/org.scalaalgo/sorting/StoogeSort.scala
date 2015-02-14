@@ -2,9 +2,9 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object StoogeSort extends SortingAlgorithm{
+object StoogeSort extends GeneralSortingAlgorithm{
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
-    def coreSort[T](start: Int, n: Int) : Unit = {
+    def coreSort(start: Int, n: Int) : Unit = {
       if (seq(start) > seq(n - 1)) {
         this.swap(seq, start, n - 1)
       }
@@ -18,7 +18,7 @@ object StoogeSort extends SortingAlgorithm{
       }
     }
 
-    if (!seq.isEmpty){
+    if (seq.nonEmpty){
       coreSort(0, seq.length)
     }
   }

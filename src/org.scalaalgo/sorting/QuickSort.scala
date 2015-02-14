@@ -3,7 +3,7 @@ package org.scalaalgo.sorting
 import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
-object QuickSort extends SortingAlgorithm {
+object QuickSort extends GeneralSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     this.coreSort(seq, 0, seq.length - 1)
   }

@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{SlowSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, SlowSort}
 
 class SlowSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = SlowSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = SlowSort
  }

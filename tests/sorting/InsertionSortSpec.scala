@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{InsertionSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, InsertionSort}
 
 class InsertionSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = InsertionSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = InsertionSort
 }

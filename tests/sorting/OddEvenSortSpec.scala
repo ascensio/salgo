@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{OddEvenSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, OddEvenSort}
 
 class OddEvenSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = OddEvenSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = OddEvenSort
 }

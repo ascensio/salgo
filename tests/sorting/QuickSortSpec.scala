@@ -1,9 +1,9 @@
 package sorting
 
-import org.scalaalgo.sorting.{QuickSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{GeneralSortingAlgorithm, QuickSort}
 
 class QuickSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = QuickSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = QuickSort
 
    test("Unsorted array (tailrec)") { QuickSort.sortCopyTailRec(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
    test("Empty array (tailrec)") { QuickSort.sortCopyTailRec(Array[Int]()) shouldEqual Array[Int]() }

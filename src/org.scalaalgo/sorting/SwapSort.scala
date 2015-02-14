@@ -2,7 +2,7 @@ package org.scalaalgo.sorting
 
 import scala.reflect.ClassTag
 
-object SwapSort extends SortingAlgorithm{
+object SwapSort extends GeneralSortingAlgorithm{
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     var start = 0
     val n = seq.length - 1

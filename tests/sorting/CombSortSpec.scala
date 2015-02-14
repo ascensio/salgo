@@ -1,7 +1,7 @@
 package sorting
 
-import org.scalaalgo.sorting.{CombSort, SortingAlgorithm}
+import org.scalaalgo.sorting.{CombSort, GeneralSortingAlgorithm}
 
 class CombSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: SortingAlgorithm = CombSort
+  override def getSortingAlgorithm: GeneralSortingAlgorithm = CombSort
 }
