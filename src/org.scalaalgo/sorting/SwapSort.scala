@@ -10,7 +10,12 @@ object SwapSort extends SortingAlgorithm{
       val currentValue = seq(start)
       val smallerValueCount = seq.view(start + 1, n + 1).count(e => e < currentValue)
       smallerValueCount match {
-        case i if i > 0 => this.swap(seq, start, start + smallerValueCount)
+        case i if i > 0 =>
+          val first = seq(start)
+          var secondIndex = start + smallerValueCount
+          val second = seq(secondIndex)
+          if (first == second) secondIndex = seq.indexWhere(e => e != second, secondIndex)
+          if (secondIndex > 0) this.swap(seq, start, secondIndex)
         case _ => start += 1
       }
     }

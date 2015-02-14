@@ -1,3 +1,5 @@
+package numbertheory
+
 import org.scalaalgo.numbertheory.Primes
 import org.scalatest.{FunSuite, Matchers}
 

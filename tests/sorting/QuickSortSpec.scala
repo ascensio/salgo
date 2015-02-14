@@ -1,14 +1,9 @@
 package sorting
 
-import org.scalaalgo.sorting.QuickSort
-import org.scalatest.{FunSuite, Matchers}
+import org.scalaalgo.sorting.{QuickSort, SortingAlgorithm}
 
-class QuickSortSpec extends FunSuite with Matchers {
-   test("Unsorted array") { QuickSort.sortCopy(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
-   test("Empty array") { QuickSort.sortCopy(Array[Int]()) shouldEqual Array[Int]() }
-   test("Sorted array") { QuickSort.sortCopy(Array(1, 2, 3, 4, 5)) shouldEqual Array(1, 2, 3, 4, 5) }
-   test("Single element array") { QuickSort.sortCopy(Array(5)) shouldEqual Array(5) }
-   test("Inverse ordered array") { QuickSort.sortCopy(Array(5, 4, 3, 2, 1)) shouldEqual Array(1, 2, 3, 4, 5) }
+class QuickSortSpec extends GenericSortSpec {
+  override def getSortingAlgorithm: SortingAlgorithm = QuickSort
 
    test("Unsorted array (tailrec)") { QuickSort.sortCopyTailRec(Array(4, 5, 3, 1, 2)) shouldEqual Array(1, 2, 3, 4, 5) }
    test("Empty array (tailrec)") { QuickSort.sortCopyTailRec(Array[Int]()) shouldEqual Array[Int]() }
