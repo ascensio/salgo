@@ -1,0 +1,74 @@
+package org.scalaalgo.numerical.linearalgebra
+
+object GaussJordan {
+  def solve(matrix: Array[Array[Double]]) : Option[Array[Double]] = {
+    this.solveCore(matrix) match {
+      case None => None
+      case _ => if (this.isResolved(matrix)) Some(matrix.map(r => r(r.length - 1))) else None
+    }
+  }
+
+  private def solveCore(matrix: Array[Array[Double]]) : Option[Unit] = {
+    var columnIndex = 0
+    for (currentStep <- 0 to matrix.length - 1) {
+      this.findBestRowIndex(matrix, currentStep, columnIndex) match {
+        case Some(i) =>
+          if (i != currentStep) this.swapRow(matrix, i, currentStep)
+          val row = matrix(currentStep)
+          val factor = row(columnIndex)
+          this.divideRow(row, factor)
+          for (otherRowIndex <- 0 to matrix.length - 1) {
+            if (currentStep != otherRowIndex) {
+              val otherRow = matrix(otherRowIndex)
+              val otherFactor = -1 * otherRow(columnIndex)
+              val rowToAdd = multiplyRowClone(row, otherFactor)
+              this.addToRow(otherRow, rowToAdd)
+            }
+          }
+          columnIndex += 1
+        case None => return None
+      }
+    }
+
+    Some(Unit)
+  }
+
+  private def findBestRowIndex(matrix: Array[Array[Double]], currentStep: Int, columnIndex: Int) : Option[Int] = {
+    for (i <- currentStep to matrix.length - 1) {
+      if (!this.isZeroOrNan(matrix(i)(columnIndex))) return Some(i)
+    }
+    None
+  }
+
+  private def swapRow(matrix: Array[Array[Double]], first: Int, second: Int) : Unit = {
+    val temp = matrix(first)
+    matrix(first) = matrix(second)
+    matrix(second) = temp
+  }
+
+  private def isResolved(matrix: Array[Array[Double]]) : Boolean = {
+    for (i <- 0 to matrix.length - 1) {
+      val value = matrix(i)(i)
+      if (this.isZeroOrNan(value)) false
+    }
+
+    true
+  }
+
+  private def isZeroOrNan(value: Double) : Boolean = {
+    if ((value < 1e-8 && value > -1e-8) || value == Double.NaN) true
+    else false
+  }
+
+  private def divideRow(row: Array[Double], factor: Double) : Unit = {
+    for (i <- 0 to row.length - 1) row(i) = row(i) / factor
+  }
+
+  private def multiplyRowClone(row: Array[Double], factor: Double) : Array[Double] = {
+    row.map(d => d * factor)
+  }
+
+  private def addToRow(row: Array[Double], rowToAdd: Array[Double]) : Unit = {
+    for (i <- 0 to row.length - 1) row(i) = row(i) + rowToAdd(i)
+  }
+}
