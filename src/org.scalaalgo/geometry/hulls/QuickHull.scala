@@ -1,4 +1,6 @@
-package org.scalaalgo.geometry
+package org.scalaalgo.geometry.hulls
+
+import org.scalaalgo.geometry.structures.{Plane3D, Vector3D}
 
 import scala.collection.mutable.ListBuffer
 
@@ -21,14 +23,14 @@ object QuickHull {
     val zMax = resultMinMaxForZ._2
 
     val planes = List[Plane3D](
-      Plane3D.create(xMin, yMin, zMin),
-      Plane3D.create(xMin, yMin, zMax),
-      Plane3D.create(xMin, yMax, zMin),
-      Plane3D.create(xMin, yMax, zMax),
-      Plane3D.create(xMax, yMin, zMin),
-      Plane3D.create(xMax, yMin, zMax),
-      Plane3D.create(xMax, yMax, zMin),
-      Plane3D.create(xMax, yMax, zMax)
+      Plane3D(xMin, yMin, zMin),
+      Plane3D(xMin, yMin, zMax),
+      Plane3D(xMin, yMax, zMin),
+      Plane3D(xMin, yMax, zMax),
+      Plane3D(xMax, yMin, zMin),
+      Plane3D(xMax, yMin, zMax),
+      Plane3D(xMax, yMax, zMin),
+      Plane3D(xMax, yMax, zMax)
     )
 
     val firstPlanePoint = xMin
