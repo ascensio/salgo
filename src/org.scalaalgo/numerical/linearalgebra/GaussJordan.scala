@@ -4,11 +4,12 @@ object GaussJordan {
   def solve(matrix: Array[Array[Double]]) : Option[Array[Double]] = {
     this.solveCore(matrix) match {
       case None => None
-      case _ => if (this.isResolved(matrix)) Some(matrix.map(r => r(r.length - 1))) else None
+      case Some(false) => None
+      case Some(true) => Some(matrix.map(r => r(r.length - 1)))
     }
   }
 
-  private def solveCore(matrix: Array[Array[Double]]) : Option[Unit] = {
+  private def solveCore(matrix: Array[Array[Double]]) : Option[Boolean] = {
     var columnIndex = 0
     for (currentStep <- 0 to matrix.length - 1) {
       this.findBestRowIndex(matrix, currentStep, columnIndex) match {
@@ -30,7 +31,7 @@ object GaussJordan {
       }
     }
 
-    Some(Unit)
+    Some(this.isResolved(matrix))
   }
 
   private def findBestRowIndex(matrix: Array[Array[Double]], currentStep: Int, columnIndex: Int) : Option[Int] = {
@@ -56,8 +57,7 @@ object GaussJordan {
   }
 
   private def isZeroOrNan(value: Double) : Boolean = {
-    if ((value < 1e-8 && value > -1e-8) || value == Double.NaN) true
-    else false
+    (value < 1e-8 && value > -1e-8) || value == Double.NaN
   }
 
   private def divideRow(row: Array[Double], factor: Double) : Unit = {
