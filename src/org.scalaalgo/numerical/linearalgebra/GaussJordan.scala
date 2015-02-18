@@ -1,15 +1,46 @@
 package org.scalaalgo.numerical.linearalgebra
 
 object GaussJordan {
+  def solve(matrix: Array[Array[Double]], d: Array[Double]) : Option[Array[Double]] = {
+    val clone = matrix.clone()
+    for (r <- 0 to clone.length - 1) {
+      clone(r) = clone(r) :+ d(r)
+    }
+
+    this.solveCore(clone)(new Array[Double](clone.length))((a, idx, r) => {
+      a(idx) = r(r.length - 1)
+      a
+    })
+  }
+
+  def solve(matrix: Array[Array[Double]], d: Array[Array[Double]]) : Option[Array[Array[Double]]] = {
+    val clone = matrix.clone()
+    for (r <- 0 to clone.length - 1) {
+      clone(r) = clone(r) ++ d(r)
+    }
+
+    this.solveCore(clone)(new Array[Array[Double]](clone.length))((a, idx, r) => {
+      a(idx) = r.slice(r.length - d.length, r.length)
+      a
+    })
+  }
+
   def solve(matrix: Array[Array[Double]]) : Option[Array[Double]] = {
-    this.solveCore(matrix) match {
+    this.solveCore(matrix)(new Array[Double](matrix.length))((a, idx, r) => {
+      a(idx) = r(r.length - 1)
+      a
+    })
+  }
+
+  private def solveCore[R](matrix: Array[Array[Double]])(default: R)(resultOp: (R, Int, Array[Double]) => R) : Option[R] = {
+    this.solveCoreLoop(matrix) match {
       case None => None
       case Some(false) => None
-      case Some(true) => Some(matrix.map(r => r(r.length - 1)))
+      case Some(true) => Some(matrix.foldLeft((0, default))((a, r) => (a._1 + 1, resultOp(a._2, a._1, r)))._2)
     }
   }
 
-  private def solveCore(matrix: Array[Array[Double]]) : Option[Boolean] = {
+  private def solveCoreLoop(matrix: Array[Array[Double]]) : Option[Boolean] = {
     var columnIndex = 0
     for (currentStep <- 0 to matrix.length - 1) {
       this.findBestRowIndex(matrix, currentStep, columnIndex) match {

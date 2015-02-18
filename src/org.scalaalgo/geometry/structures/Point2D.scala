@@ -9,11 +9,8 @@ case class Point2D(x: Double, y: Double) {
     Vector2D(this.x - subtrahend.x, this.y - subtrahend.y)
   }
 
-  def * (factor: Point2D) : Point2D = {
-    Point2D(this.x * factor.x, this.y * factor.y)
-  }
-  def / (divisor: Point2D) : Point2D = {
-    Point2D(this.x / divisor.x, this.y / divisor.y)
+  def toVector : Vector2D = {
+    Vector2D(this.x, this.y)
   }
 }
 

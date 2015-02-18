@@ -12,16 +12,6 @@ case class Point3D(x: Double, y: Double, z: Double) {
   def toVector : Vector3D = {
     Vector3D(this.x, this.y, this.z)
   }
-
-  /*
-  def * (vector: Vector3D) : Vector3D = {
-    Vector3D(this.x * vector.x, this.y * vector.y, this.z * vector.z)
-  }
-
-  def / (divisor: Point3D) : Point3D = {
-    Point3D(this.x / divisor.x, this.y / divisor.y, this.z / divisor.z)
-  }
-  */
 }
 
 object Point3D {
