@@ -1,6 +1,6 @@
 package sorting
 
-import org.scalaalgo.sorting.IntegerSortingAlgorithm
+import org.salgo.sorting.IntegerSortingAlgorithm
 import org.scalatest.{FunSuite, Matchers}
 
 abstract class IntegerSortSpec extends FunSuite with Matchers {

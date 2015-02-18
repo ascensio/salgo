@@ -1,6 +1,6 @@
 package numbertheory
 
-import org.scalaalgo.numbertheory.GreatestCommonDivisor
+import org.salgo.numbertheory.GreatestCommonDivisor
 import org.scalatest.{FunSuite, Matchers}
 
 class GreatestCommonDivisorSpec extends FunSuite with Matchers {

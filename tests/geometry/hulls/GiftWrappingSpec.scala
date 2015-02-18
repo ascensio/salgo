@@ -1,7 +1,7 @@
 package geometry.hulls
 
-import org.scalaalgo.geometry.hulls.GiftWrapping
-import org.scalaalgo.geometry.structures.Point2D
+import org.salgo.geometry.hulls.GiftWrapping
+import org.salgo.geometry.structures.Point2D
 import org.scalatest.{FunSuite, Matchers}
 
 class GiftWrappingSpec  extends FunSuite with Matchers {

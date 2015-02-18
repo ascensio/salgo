@@ -1,6 +1,6 @@
 package geometry.structures
 
-import org.scalaalgo.geometry.structures.Matrix
+import org.salgo.geometry.structures.Matrix
 import org.scalatest.{FunSuite, Matchers}
 
 class MatrixSpec extends FunSuite with Matchers {

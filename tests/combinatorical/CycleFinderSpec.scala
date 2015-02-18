@@ -1,6 +1,6 @@
 package combinatorical
 
-import org.scalaalgo.combinatorical.{CycleFinder, CycleInformation}
+import org.salgo.combinatorical.{CycleFinder, CycleInformation}
 import org.scalatest.{FunSuite, Matchers}
 
 abstract class CycleFinderSpec extends FunSuite with Matchers {

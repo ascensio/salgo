@@ -1,4 +1,4 @@
-# scala-algo
+# salgo
 
 This library provides implementations for commonly used algorithms.
 

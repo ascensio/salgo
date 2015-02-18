@@ -1,6 +1,6 @@
 package geometry.structures
 
-import org.scalaalgo.geometry.structures.Vector2D
+import org.salgo.geometry.structures.Vector2D
 import org.scalatest.{FunSuite, Matchers}
 
 class Vector2DSpec extends FunSuite with Matchers {

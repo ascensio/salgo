@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-algo.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-algo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-algo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-algo-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/salgo.iml" filepath="$PROJECT_DIR$/.idea/modules/salgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/salgo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/salgo-build.iml" />
     </modules>
   </component>
 </project>

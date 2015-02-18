@@ -1,6 +1,6 @@
 package numerical.linearalgebra
 
-import org.scalaalgo.numerical.linearalgebra.GaussJordan
+import org.salgo.numerical.linearalgebra.GaussJordan
 import org.scalatest.{FunSuite, Matchers}
 
 class GaussJordanSpec extends FunSuite with Matchers {

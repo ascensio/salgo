@@ -1,6 +1,6 @@
 package sorting
 
-import org.scalaalgo.sorting.{GeneralSortingAlgorithm, QuickSort}
+import org.salgo.sorting.{GeneralSortingAlgorithm, QuickSort}
 
 class QuickSortSpec extends GenericSortSpec {
   override def getSortingAlgorithm: GeneralSortingAlgorithm = QuickSort

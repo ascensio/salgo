@@ -1,6 +1,6 @@
 package sorting
 
-import org.scalaalgo.sorting.GeneralSortingAlgorithm
+import org.salgo.sorting.GeneralSortingAlgorithm
 import org.scalatest.{FunSuite, Matchers}
 
 abstract class GenericSortSpec extends FunSuite with Matchers {

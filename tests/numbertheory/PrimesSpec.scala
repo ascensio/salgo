@@ -1,6 +1,6 @@
 package numbertheory
 
-import org.scalaalgo.numbertheory.Primes
+import org.salgo.numbertheory.Primes
 import org.scalatest.{FunSuite, Matchers}
 
 class PrimesSpec extends FunSuite with Matchers {

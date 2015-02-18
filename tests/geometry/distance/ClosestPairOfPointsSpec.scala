@@ -1,7 +1,7 @@
 package geometry.distance
 
-import org.scalaalgo.geometry.distance.ClosestPairOfPoints
-import org.scalaalgo.geometry.structures.Point2D
+import org.salgo.geometry.distance.ClosestPairOfPoints
+import org.salgo.geometry.structures.Point2D
 import org.scalatest.{FunSuite, Matchers}
 
 class ClosestPairOfPointsSpec extends FunSuite with Matchers {
