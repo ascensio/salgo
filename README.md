@@ -43,4 +43,12 @@ Number-Theory
 
 Geometry
 --------
+* Structures (Point, Vector, Matrix, Plane)
 * Closest pair of points
+* Gift-Wrapping
+
+
+Sequence-Algorithms
+--------------------------
+* Kadane
+* Bitap
