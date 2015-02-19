@@ -1,6 +1,6 @@
 # salgo
 
-This library provides implementations for commonly used algorithms.
+This library provides implementations for commonly used algorithms written in Scala.
 
 Sorting-Algorithms
 ------------------

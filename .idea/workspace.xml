@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fada7b5-9615-487e-8163-1c8bc2ced91c" name="Default" comment="Bitap">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org.salgo/sequences/matching/Bitap.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/sequence/matching/BitapSpec.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org.salgo/sequences/subsequences/Kadane.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/sequence/subsequences/KadaneSpec.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/i55t44.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/geometry/structures/MatrixSpec.scala" afterPath="$PROJECT_DIR$/tests/geometry/structures/MatrixSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -59,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1003">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17114094" vertical-offset="0" max-vertical-offset="1003">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KadaneSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KadaneSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/sequence/subsequences/KadaneSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14261745" vertical-offset="0" max-vertical-offset="596">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#31#77#0" expanded="true" />
               </folding>
@@ -94,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org.salgo/sorting/QuickSort.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/RadixSort.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/ShakerSort.scala" />
@@ -144,6 +137,7 @@
         <option value="$PROJECT_DIR$/tests/sequence/matching/Bitonic.scala" />
         <option value="$PROJECT_DIR$/tests/sequence/matching/BitonicSpec.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sequences/matching/Bitap.scala" />
+        <option value="$PROJECT_DIR$/tests/sequence/subsequences/KadaneSpec.scala" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -856,7 +850,7 @@
       <workItem from="1424238809436" duration="1312000" />
       <workItem from="1424244841688" duration="129000" />
       <workItem from="1424245009976" duration="6576000" />
-      <workItem from="1424277872723" duration="6887000" />
+      <workItem from="1424277872723" duration="7725000" />
     </task>
     <task id="LOCAL-00001" summary="Project creation">
       <created>1423635254315</created>
@@ -948,11 +942,17 @@
       <option name="project" value="LOCAL" />
       <updated>1424245298709</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Bitap">
+      <created>1424284827701</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1424284827701</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161420000" />
+    <option name="totallyTimeSpent" value="162258000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1427,21 +1427,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1003">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/sequence/subsequences/KadaneSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14261745" vertical-offset="0" max-vertical-offset="596">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#31#77#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17114094" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
