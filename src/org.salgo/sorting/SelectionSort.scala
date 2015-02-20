@@ -1,5 +1,6 @@
 package org.salgo.sorting
 
+import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
 object SelectionSort extends GeneralSortingAlgorithm {
@@ -20,5 +21,29 @@ object SelectionSort extends GeneralSortingAlgorithm {
       seq.update(current, minValue)
       current += 1
     }
+  }
+
+  def sort[T <: Any : ClassTag](seq: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
+    this.sort(seq, Nil)
+  }
+
+  @tailrec
+  private def sort[T <: Any : ClassTag](seq: Seq[T], result: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
+    seq match {
+      case (h :: Nil) => result :+ h
+      case (h :: t) =>
+        val min = t.min
+        if (min < h) this.sort(this.swap(t, Nil, h, t.min), result :+ min)
+        else this.sort(t, result :+ h)
+    }
+  }
+
+  @tailrec
+  private def swap[T <: Any : ClassTag](seq: Seq[T], acc: Seq[T], replacement: T, valueToReplace: T)(implicit ev: T => Ordered[T]) : Seq[T] = seq match {
+    case (h :: Nil) if h == valueToReplace => acc :+ replacement
+    case (h :: Nil) => acc :+ h
+    case (h :: t) if h == valueToReplace => (acc :+ replacement) ++ t
+    case (h1 :: h2 :: t) if h2 == valueToReplace => (acc :+ h1 :+ replacement) ++ t
+    case (h :: t) => this.swap(t, acc ++ Seq(h), replacement, valueToReplace)
   }
 }
