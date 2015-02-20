@@ -24,6 +24,10 @@ case class Vector2D(x: Double, y: Double) {
   def magnitude() : Double = {
     math.sqrt((this.x * this.x) + (this.y * this.y))
   }
+
+  def normalizedVectors() : (Vector2D, Vector2D) = {
+    (Vector2D(-this.y, this.x), Vector2D(this.y, -this.x))
+  }
 }
 
 object Vector2D {

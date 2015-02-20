@@ -46,6 +46,7 @@ Geometry
 * Structures (Point, Vector, Matrix, Plane)
 * Closest pair of points
 * Gift-Wrapping
+* QuickHull
 
 
 Sequence-Algorithms
