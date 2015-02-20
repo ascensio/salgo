@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fada7b5-9615-487e-8163-1c8bc2ced91c" name="Default" comment="SelectionSort">
+    <list default="true" id="9fada7b5-9615-487e-8163-1c8bc2ced91c" name="Default" comment="SelectionSort + GnomeSort">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/GeneralFunctionalSortingAlgorithm.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/GnomeSort.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/GnomeSort.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/InsertionSort.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/InsertionSort.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/sorting/InsertionSortSpec.scala" afterPath="$PROJECT_DIR$/tests/sorting/InsertionSortSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/sorting/SelectionSortSpec.scala" afterPath="$PROJECT_DIR$/tests/sorting/SelectionSortSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sorting/SortingAlgorithm.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sorting/SortingAlgorithm.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Sortex.iws" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="MergeSort.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1462">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1462">
+              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
               <folding>
                 <element signature="e#27#58#0" expanded="true" />
               </folding>
@@ -47,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericSortSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/sorting/GenericSortSpec.scala">
+      <file leaf-file-name="OddEvenSort.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/OddEvenSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="15" column="0" selection-start-line="14" selection-start-column="2" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -61,90 +63,92 @@
         <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#27#58#0" expanded="true" />
-                <element signature="e#147#604#0" expanded="false" />
-                <element signature="e#608#721#0" expanded="false" />
-                <element signature="e#725#1069#0" expanded="false" />
+                <element signature="e#187#644#0" expanded="false" />
+                <element signature="e#648#761#0" expanded="false" />
+                <element signature="e#765#1109#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GnomeSort.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GnomeSort.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GnomeSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29466668" vertical-offset="0" max-vertical-offset="750">
-              <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="e#27#58#0" expanded="true" />
-                <element signature="e#143#713#0" expanded="false" />
-                <element signature="e#717#829#0" expanded="false" />
-                <element signature="e#948#1198#0" expanded="false" />
-                <element signature="e#1331#1594#0" expanded="false" />
+                <element signature="e#182#752#0" expanded="false" />
+                <element signature="e#756#868#0" expanded="false" />
+                <element signature="e#987#1237#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortingAlgorithm.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/SortingAlgorithm.scala">
+      <file leaf-file-name="HeapSort.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/HeapSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <element signature="e#27#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectionSortSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/sorting/SelectionSortSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GnomeSortSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/sorting/GnomeSortSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShakerSort.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/ShakerSort.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="833">
               <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShellSort.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/ShellSort.scala">
+      <file leaf-file-name="CocktailSort.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CocktailSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="646">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CycleSort.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CombSort.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CombSort.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CycleSort.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CycleSort.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+            <state vertical-scroll-proportion="0.31733334" vertical-offset="0" max-vertical-offset="750">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertionSort.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/InsertionSort.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="5" column="93" selection-start-line="5" selection-start-column="93" selection-end-line="5" selection-end-column="93" />
+              <folding>
+                <element signature="e#27#58#0" expanded="true" />
+                <element signature="e#553#673#0" expanded="false" />
+                <element signature="e#792#963#0" expanded="false" />
+                <element signature="e#1111#1381#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneralSortingAlgorithm.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/geometry/structures/Vector2DSpec.scala" />
-        <option value="$PROJECT_DIR$/tests/numbertheory/GreatestCommonDivisorSpec.scala" />
         <option value="$PROJECT_DIR$/tests/numbertheory/PrimesSpec.scala" />
         <option value="$PROJECT_DIR$/tests/numerical/linearalgebra/GaussJordanSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/BitonicSortSpec.scala" />
@@ -173,7 +175,6 @@
         <option value="$PROJECT_DIR$/tests/sorting/CombSortSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/CycleSortSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/HeapSortSpec.scala" />
-        <option value="$PROJECT_DIR$/tests/sorting/InsertionSortSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/IntegerSortSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/OddEvenSortSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/QuickSortSpec.scala" />
@@ -206,14 +207,17 @@
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/BitonicSort.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/QuickSort.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/MergeSortSpec.scala" />
-        <option value="$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/SwapSort.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/SelectionSortSpec.scala" />
-        <option value="$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala" />
-        <option value="$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/SortingAlgorithm.scala" />
         <option value="$PROJECT_DIR$/tests/sorting/GnomeSortSpec.scala" />
+        <option value="$PROJECT_DIR$/tests/sorting/InsertionSortSpec.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sorting/GeneralFunctionalSortingAlgorithm.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sorting/GnomeSort.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sorting/InsertionSort.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala" />
       </list>
     </option>
   </component>
@@ -1077,11 +1081,17 @@
       <option name="project" value="LOCAL" />
       <updated>1424457306164</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="SelectionSort + GnomeSort">
+      <created>1424464150801</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1424464150801</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204898000" />
+    <option name="totallyTimeSpent" value="205855000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1105,7 +1115,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1119,7 +1129,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43604004" sideWeight="0.67733335" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3047831" sideWeight="0.49973333" order="7" side_tool="false" content_ui="tabs" />
@@ -1175,7 +1185,8 @@
     <MESSAGE value="Readme" />
     <MESSAGE value="QuickHull" />
     <MESSAGE value="SelectionSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="SelectionSort" />
+    <MESSAGE value="SelectionSort + GnomeSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="SelectionSort + GnomeSort" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1234,41 +1245,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/geometry/structures/Plane3D.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4009434" vertical-offset="0" max-vertical-offset="636">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geometry/structures/MatrixSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="7" column="0" selection-start-line="5" selection-start-column="16" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/geometry/structures/Line3D.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geometry/structures/Line2DSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geometry/hulls/GiftWrappingSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="578">
-          <caret line="13" column="0" selection-start-line="7" selection-start-column="2" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org.salgo/geometry/hulls/GiftWrapping.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="952">
@@ -1413,18 +1389,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29818">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1424464111693" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424464111693" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424464111693" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424465051003" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424465051003" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424465051003" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CocktailSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,14 +1408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CombSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1540,14 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/OddEvenSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/QuickSort.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1207">
@@ -1568,40 +1520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1462">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#27#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CycleSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/sorting/GenericSortSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="15" column="0" selection-start-line="14" selection-start-column="2" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1632,30 +1550,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala">
+    <entry file="file://$PROJECT_DIR$/tests/sorting/GenericSortSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="e#27#58#0" expanded="true" />
-            <element signature="e#147#604#0" expanded="false" />
-            <element signature="e#608#721#0" expanded="false" />
-            <element signature="e#725#1069#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.31733334" vertical-offset="0" max-vertical-offset="750">
+          <caret line="15" column="0" selection-start-line="14" selection-start-column="2" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/sorting/InsertionSortSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GeneralFunctionalSortingAlgorithm.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/BubbleSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CocktailSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GnomeSort.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29466668" vertical-offset="0" max-vertical-offset="750">
-          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#27#58#0" expanded="true" />
-            <element signature="e#143#713#0" expanded="false" />
-            <element signature="e#717#829#0" expanded="false" />
-            <element signature="e#948#1198#0" expanded="false" />
-            <element signature="e#1331#1594#0" expanded="false" />
+            <element signature="e#182#752#0" expanded="false" />
+            <element signature="e#756#868#0" expanded="false" />
+            <element signature="e#987#1237#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/HeapSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/InsertionSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="5" column="93" selection-start-line="5" selection-start-column="93" selection-end-line="5" selection-end-column="93" />
+          <folding>
+            <element signature="e#27#58#0" expanded="true" />
+            <element signature="e#553#673#0" expanded="false" />
+            <element signature="e#792#963#0" expanded="false" />
+            <element signature="e#1111#1381#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/MergeSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1462">
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+          <folding>
+            <element signature="e#27#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/OddEvenSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/SelectionSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#58#0" expanded="true" />
+            <element signature="e#187#644#0" expanded="false" />
+            <element signature="e#648#761#0" expanded="false" />
+            <element signature="e#765#1109#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CombSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/CycleSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31733334" vertical-offset="0" max-vertical-offset="750">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
