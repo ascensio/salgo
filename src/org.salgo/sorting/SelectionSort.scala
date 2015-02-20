@@ -37,13 +37,4 @@ object SelectionSort extends GeneralSortingAlgorithm {
         else this.sort(t, result :+ h)
     }
   }
-
-  @tailrec
-  private def swap[T <: Any : ClassTag](seq: Seq[T], acc: Seq[T], replacement: T, valueToReplace: T)(implicit ev: T => Ordered[T]) : Seq[T] = seq match {
-    case (h :: Nil) if h == valueToReplace => acc :+ replacement
-    case (h :: Nil) => acc :+ h
-    case (h :: t) if h == valueToReplace => (acc :+ replacement) ++ t
-    case (h1 :: h2 :: t) if h2 == valueToReplace => (acc :+ h1 :+ replacement) ++ t
-    case (h :: t) => this.swap(t, acc ++ Seq(h), replacement, valueToReplace)
-  }
 }
