@@ -3,7 +3,7 @@ package org.salgo.sorting
 import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
-object SelectionSort extends GeneralSortingAlgorithm {
+object SelectionSort extends GeneralSortingAlgorithm  with GeneralFunctionalSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     val n = seq.length - 1
     var current = 0

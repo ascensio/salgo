@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 import scala.collection.immutable.::
 import scala.reflect.ClassTag
 
-object MergeSort extends GeneralSortingAlgorithm {
+object MergeSort extends GeneralSortingAlgorithm  with GeneralFunctionalSortingAlgorithm {
   def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     val result = this.mergeSortCore[T](seq)
     for (i <- 0 to seq.length - 1) {
@@ -21,12 +21,12 @@ object MergeSort extends GeneralSortingAlgorithm {
     }
   }
 
-  def sort2[T: ClassTag](a: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
+  def sort[T: ClassTag](a: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
     a.length match {
       case n if n < 2 => a
       case _ =>
         val (left, right) = a splitAt (a.length / 2)
-        this.mergeRecursive[T](sort2(left), sort2(right), Nil)
+        this.mergeRecursive[T](sort(left), sort(right), Nil)
     }
   }
 
@@ -71,8 +71,8 @@ object MergeSort extends GeneralSortingAlgorithm {
   @tailrec
   private def mergeRecursive[T: ClassTag](left: Seq[T], right: Seq[T], result: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = (left, right) match {
     case(Nil, Nil) => result
-    case (_, Nil) =>result ++ this.sort2(left)
-    case (Nil, _) => result ++ this.sort2(right)
+    case (_, Nil) =>result ++ this.sort(left)
+    case (Nil, _) => result ++ this.sort(right)
     case (lh :: lt, rh :: rt) if lh < rh => this.mergeRecursive[T](lt, right, result ++ List(lh))
     case  (lh :: lt, rh :: rt) => this.mergeRecursive(left, rt, result ++ List(rh))
   }
