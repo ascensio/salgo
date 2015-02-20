@@ -1,5 +1,7 @@
 package org.salgo.sorting
 
+import scala.annotation.tailrec
+import scala.collection.immutable.::
 import scala.reflect.ClassTag
 
 object MergeSort extends GeneralSortingAlgorithm {
@@ -10,24 +12,25 @@ object MergeSort extends GeneralSortingAlgorithm {
     }
   }
 
-  def mergeSortCore[T: ClassTag](a: Array[T])(implicit ev: T => Ordered[T]) : Array[T] = {
+  def mergeSortCore[T: ClassTag](a: Array[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
     a.length match {
-      case 0 => a
-      case 1 => a
+      case n if n < 2 => a
       case _ =>
-        val split = this.splitArray(a)
-        this.merge[T](mergeSortCore(split._1), mergeSortCore(split._2))
+        val (left, right) = a splitAt (a.length / 2)
+        this.mergeIterative[T](mergeSortCore(left), mergeSortCore(right))
     }
   }
 
-  private def splitArray[T: ClassTag](a: Array[T]) : (Array[T], Array[T]) = {
-    val half: Int = a.length / 2
-    val left = a.slice(0, half)
-    val right = a.slice(half, a.length)
-    (left, right)
+  def sort2[T: ClassTag](a: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
+    a.length match {
+      case n if n < 2 => a
+      case _ =>
+        val (left, right) = a splitAt (a.length / 2)
+        this.mergeRecursive[T](sort2(left), sort2(right), Nil)
+    }
   }
 
-  private def merge[T: ClassTag](left: Array[T], right: Array[T])(implicit ev: T => Ordered[T]) : Array[T] = {
+  private def mergeIterative[T: ClassTag](left: Seq[T], right: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = {
     val result = new Array[T](left.length + right.length)
     var leftIndex = 0
     var rightIndex = 0
@@ -64,4 +67,14 @@ object MergeSort extends GeneralSortingAlgorithm {
 
     result
   }
+
+  @tailrec
+  private def mergeRecursive[T: ClassTag](left: Seq[T], right: Seq[T], result: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = (left, right) match {
+    case(Nil, Nil) => result
+    case (_, Nil) =>result ++ this.sort2(left)
+    case (Nil, _) => result ++ this.sort2(right)
+    case (lh :: lt, rh :: rt) if lh < rh => this.mergeRecursive[T](lt, right, result ++ List(lh))
+    case  (lh :: lt, rh :: rt) => this.mergeRecursive(left, rt, result ++ List(rh))
+  }
 }
+
