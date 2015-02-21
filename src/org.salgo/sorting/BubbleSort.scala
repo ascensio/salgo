@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
 object BubbleSort extends GeneralSortingAlgorithm with GeneralFunctionalSortingAlgorithm {
-  def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
+  override def sort[T <: Any : ClassTag](seq: Array[T])(implicit ev: T => Ordered[T]) : Unit = {
     var swapped = true
     var j = 0
     while (swapped) {

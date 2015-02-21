@@ -23,25 +23,5 @@ object Kadane {
     })
 
     (result._3, result._4)
-
-/*
-    for (v <- array) {
-      val combination = combine(currentMax, v)
-      if (combination > default) {
-        currentMax = combination
-        currentSeq = currentSeq :+ v
-      }
-      else {
-        currentMax = default
-        currentSeq = Seq[T]()
-      }
-
-      if (currentMax > finalMax) {
-        finalMax = currentMax
-        finalSeq = currentSeq
-      }
-    }
-*/
-
   }
 }

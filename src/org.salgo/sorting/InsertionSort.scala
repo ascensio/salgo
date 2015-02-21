@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 import scala.reflect.ClassTag
 
 object InsertionSort extends GeneralSortingAlgorithm  with GeneralFunctionalSortingAlgorithm {
-  def sort[T <: Any : ClassTag](seq: Array[T])(implicit converter: T => Ordered[T]) : Unit = {
+  override def sort[T <: Any : ClassTag](seq: Array[T])(implicit converter: T => Ordered[T]) : Unit = {
     for (i <- 1 to seq.length - 1) {
       for (k <- i to 1 by -1 if k > 0) {
         val current = seq(k)
@@ -17,7 +17,7 @@ object InsertionSort extends GeneralSortingAlgorithm  with GeneralFunctionalSort
     }
   }
 
-  def sort[T <: Any : ClassTag](seq: Seq[T])(implicit converter: T => Ordered[T]) : Seq[T] = {
+  override def sort[T <: Any : ClassTag](seq: Seq[T])(implicit converter: T => Ordered[T]) : Seq[T] = {
     this.sort(seq, Nil)
   }
 
