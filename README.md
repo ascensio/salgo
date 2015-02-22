@@ -47,9 +47,18 @@ Geometry
 * Closest pair of points
 * Gift-Wrapping
 * QuickHull
+* Graham Scan
 
 
 Sequence-Algorithms
---------------------------
-* Kadane
-* Bitap
+-------------------
+* Sub sequences (Kadane)
+* Alignment (Dynamic Time Wrapping)
+* Shuffling (FisherYates)
+* Matching (Bitap)
+
+
+Statistics
+----------
+* Variance
+* Covariance
