@@ -1,6 +1,6 @@
 package org.salgo.geometry.structures
 
-import org.salgo.common.MathUtils
+import org.salgo.common.{Comparison, MathUtils}
 
 case class Point3D(x: Double, y: Double, z: Double) {
   def + (toAdd: Point3D) : Vector3D = {
@@ -18,7 +18,7 @@ case class Point3D(x: Double, y: Double, z: Double) {
   def isInTetrahedra(a: Point3D, b: Point3D, c: Point3D, d: Point3D, epsilon: Double) : Boolean = {
     //if (!this.isInTetrahedraBoundingBox(a, b, c, d, epsilon)) false
     //else
-    if (this.isInTetrahedraByDotProduct(a, b, c, d)) true
+    if (this.isInTetrahedraByDotProduct(a, b, c, d, epsilon)) true
     else false
   }
 
@@ -32,13 +32,26 @@ case class Point3D(x: Double, y: Double, z: Double) {
     else true
   }
 
-  def isInTetrahedraByDotProduct(a: Point3D, b: Point3D, c: Point3D, d: Point3D) : Boolean = {
+  def isInTetrahedraByDotProduct(a: Point3D, b: Point3D, c: Point3D, d: Point3D, epsilon: Double) : Boolean = {
      val d0 = this.getDeterminant(a, b, c, d)
      val d1 = this.getDeterminant(this, b, c, d)
      val d2 = this.getDeterminant(a, this, c, d)
      val d3 = this.getDeterminant(a, b, this, d)
      val d4 = this.getDeterminant(a, b, c, this)
-    (d0 > 0 && d1 > 0 && d2 > 0 && d3 > 0 && d4 > 0) || (d0 < 0 && d1 < 0 && d2 < 0 && d3 < 0 && d4 < 0)
+
+    if (Comparison.isApproximatelyEqualOrGreater(d0, 0d)) {
+      if (!Comparison.isApproximatelyEqualOrGreater(d1, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrGreater(d2, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrGreater(d3, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrGreater(d4, 0d)) false
+      else true
+    } else {
+      if (!Comparison.isApproximatelyEqualOrSmaller(d1, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrSmaller(d2, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrSmaller(d3, 0d)) false
+      else if (!Comparison.isApproximatelyEqualOrSmaller(d4, 0d)) false
+      else true
+    }
   }
 
   private def getDeterminant(a: Point3D, b: Point3D, c: Point3D, d: Point3D, default: Double = 0.0) : Double = {

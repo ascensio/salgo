@@ -6,11 +6,9 @@ import scala.annotation.tailrec
 
 case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int, private val values: Array[Array[Double]]) extends AnyMatrix {
 
-  override def getRowDimension: Int = this.rowCount
+  override def rowDimension: Int = this.rowCount
 
-  override def getColumnDimension: Int = this.columnCount
-
-  def isSquare = this.rowCount == this.columnCount
+  override def columnDimension: Int = this.columnCount
 
   def + (other: DoubleMatrix) : Option[DoubleMatrix] = {
     if (this.rowCount != other.rowCount || this.columnCount != other.columnCount) None
@@ -64,7 +62,7 @@ case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int,
     this.isSquare match {
       case false => None
       case true =>
-        GaussJordan.solve(this.values, DoubleMatrix.createUnityMatrix(this.getRowDimension).values) match {
+        GaussJordan.solve(this.values, DoubleMatrix.createUnityMatrix(this.rowDimension).values) match {
           case Some(r) => Some(DoubleMatrix(r.length, r.length, r))
           case _ => None
         }
@@ -73,11 +71,12 @@ case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int,
 
   def determinant() : Option[Double] = {
     if (!this.isSquare) None
-    else if (this.getRowDimension == 2) Some(this.determinant2())
-    else if (this.getRowDimension == 3) Some(this.determinant3())
+    else if (this.rowDimension == 1) Some(this.values(0)(0))
+    else if (this.rowDimension == 2) Some(this.determinant2())
+    else if (this.rowDimension == 3) Some(this.determinant3())
     else {
       var det = 0.0
-      for (r <- 0 to this.getRowDimension - 1) {
+      for (r <- 0 to this.rowDimension - 1) {
         val factor = if (r % 2 == 0) 1 else -1
         det += this.values(r)(0) * this.removeRowAndColumn(r, 0).determinant().getOrElse(0.0) * factor
       }
@@ -98,7 +97,7 @@ case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int,
       this.values(0)(0) * this.values(1)(2)* this.values(2)(1)
   }
 
-  private def subMatrix(rowStart: Int, rows: Int, colStart: Int, cols: Int) : DoubleMatrix = {
+  def subMatrix(rowStart: Int, rows: Int, colStart: Int, cols: Int) : DoubleMatrix = {
     val values = Array.fill[Array[Double]](rows)(Array.fill[Double](cols)(0.0))
     for (r <- rowStart to rowStart + rows; c <- colStart to colStart + cols) {
       values(r - rowStart)(c-colStart) = this.values(r)(c)
@@ -106,13 +105,13 @@ case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int,
     DoubleMatrix(rows, cols, values)
   }
 
-  private def removeRowAndColumn(rowIndex: Int, colIndex: Int) : DoubleMatrix = {
-    val v = Array.fill[Array[Double]](this.getRowDimension - 1)(Array.fill[Double](this.getColumnDimension - 1)(0.0))
+  def removeRowAndColumn(rowIndex: Int, colIndex: Int) : DoubleMatrix = {
+    val v = Array.fill[Array[Double]](this.rowDimension - 1)(Array.fill[Double](this.columnDimension - 1)(0.0))
     var tR = 0
-    for (r <- 0 to this.getRowDimension - 1) {
+    for (r <- 0 to this.rowDimension - 1) {
       if (r != rowIndex) {
         var tC = 0
-        for (c <- 0 to this.getColumnDimension - 1) {
+        for (c <- 0 to this.columnDimension - 1) {
           if (c != colIndex) {
             v(tR)(tC) = this.values(r)(c)
             tC += 1
@@ -121,7 +120,7 @@ case class DoubleMatrix(private val rowCount: Int, private val columnCount: Int,
         tR += 1
       }
     }
-    DoubleMatrix(this.getRowDimension - 1, this.getColumnDimension - 1, v)
+    DoubleMatrix(this.rowDimension - 1, this.columnDimension - 1, v)
   }
 
   private def cloneValues() : Array[Array[Double]] = {

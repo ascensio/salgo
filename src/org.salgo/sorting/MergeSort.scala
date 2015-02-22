@@ -70,11 +70,11 @@ object MergeSort extends GeneralSortingAlgorithm  with GeneralFunctionalSortingA
 
   @tailrec
   private def mergeRecursive[T: ClassTag](left: Seq[T], right: Seq[T], result: Seq[T])(implicit ev: T => Ordered[T]) : Seq[T] = (left, right) match {
-    case(Nil, Nil) => result
+    case (Nil, Nil) => result
     case (_, Nil) =>result ++ this.sort(left)
     case (Nil, _) => result ++ this.sort(right)
     case (lh :: lt, rh :: rt) if lh < rh => this.mergeRecursive[T](lt, right, result ++ List(lh))
-    case  (lh :: lt, rh :: rt) => this.mergeRecursive(left, rt, result ++ List(rh))
+    case (lh :: lt, rh :: rt) => this.mergeRecursive(left, rt, result ++ List(rh))
   }
 }
 
