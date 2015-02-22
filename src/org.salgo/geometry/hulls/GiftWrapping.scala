@@ -2,14 +2,14 @@ package org.salgo.geometry.hulls
 
 import org.salgo.geometry.structures.{Point2D, Vector2D}
 
-object GiftWrapping {
+object GiftWrapping extends HullScan2D {
   def solve(points: Traversable[Point2D]) : Traversable[Point2D] = {
     val count = points.count(p => true)
     count match {
       case 0 => Traversable.empty[Point2D]
       case 1 => points
       case n =>
-        this.findLeftMostPoint(points) match {
+        this.findMinPoint(points, p => p.x) match {
           case None => Traversable.empty[Point2D]
           case Some(leftMostPoint) =>
             var result = Set[Point2D]()
@@ -38,13 +38,6 @@ object GiftWrapping {
 
             result
         }
-    }
-  }
-
-  private def findLeftMostPoint(points: Traversable[Point2D]) : Option[Point2D] = {
-    points.minBy(p => p.x) match {
-      case null => None
-      case p => Some(p)
     }
   }
 }

@@ -11,7 +11,7 @@ object ClosestPairOfPoints {
       val p = points(i)
       for (j <- i + 1 to points.length - 1) {
         val q = points(j)
-        val distance = Point2D.getDistance(p, q)
+        val distance = p.distance(q)
         if (distance < minimum) {
           minimum = distance
           result = (p, q) :: result

@@ -1,5 +1,7 @@
 package org.salgo.geometry.structures
 
+import org.salgo.common.Comparison
+
 case class Point2D(x: Double, y: Double) {
   def + (toAdd: Point2D) : Vector2D = {
     Vector2D(this.x + toAdd.x, this.y + toAdd.y)
@@ -13,6 +15,9 @@ case class Point2D(x: Double, y: Double) {
     Vector2D(this.x, this.y)
   }
 
+  def distance(other: Point2D) : Double = {
+    (other - this).magnitude()
+  }
   def isInTriangle(a: Point2D, b: Point2D, c: Point2D, epsilon: Double) : Boolean = {
     val epsilonSquare = epsilon * epsilon
     if (!this.isInTriangleBoundingBox(a, b, c, epsilon)) false
@@ -69,7 +74,21 @@ object Point2D {
     coordinates.foldLeft(Seq[Point2D]())((seq, c) => seq :+ Point2D(c._1, c._2))
   }
 
-  def getDistance(p1: Point2D, p2: Point2D) : Double = {
-    (p2 - p1).magnitude()
+  def areInClockwiseOrder(p1: Point2D, p2: Point2D, p3: Point2D) : Boolean = {
+    Comparison.isApproximatelyEqualOrSmaller(this.vectorDeterminantResult(p1, p2, p3), 0d)
+  }
+
+  def areInCounterClockwiseOrder(p1: Point2D, p2: Point2D, p3: Point2D) : Boolean = {
+    Comparison.isApproximatelyEqualOrGreater(this.vectorDeterminantResult(p1, p2, p3), 0d)
+  }
+
+  def areInCollinearOrder(p1: Point2D, p2: Point2D, p3: Point2D) : Boolean = {
+    Comparison.isApproximatelyEqual(this.vectorDeterminantResult(p1, p2, p3), 0d)
+  }
+
+  def vectorDeterminantResult(p1: Point2D, p2: Point2D, p3: Point2D) : Double = {
+    val vector12 = p2 - p1
+    val vector13 = p3 - p1
+    vector12.x * vector13.y - vector12.y * vector13.x
   }
 }

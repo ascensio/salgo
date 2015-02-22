@@ -35,7 +35,7 @@ object Vector2D {
     coordinates.foldLeft(Seq[Vector2D]())((seq, c) => seq :+ Vector2D(c._1, c._2))
   }
 
-  private def getAngle(first: Vector2D, second: Vector2D) : Double = {
+  def getAngle(first: Vector2D, second: Vector2D) : Double = {
     math.atan2(first.y, first.x) - math.atan2(second.y, second.x)
   }
 
