@@ -1,7 +1,7 @@
 package sorting
 
-import org.salgo.sorting.{CocktailSort, GeneralSortingAlgorithm}
+import org.salgo.sorting.{CocktailSort, GeneralFunctionalSortingAlgorithm}
 
-class CocktailSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: GeneralSortingAlgorithm = CocktailSort
+class CocktailSortSpec extends GenericFunctionalSortSpec {
+  override def getSortingAlgorithm: GeneralFunctionalSortingAlgorithm = CocktailSort
 }
