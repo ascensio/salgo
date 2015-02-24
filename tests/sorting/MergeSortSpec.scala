@@ -1,7 +1,7 @@
 package sorting
 
-import org.salgo.sorting.{GeneralSortingAlgorithm, MergeSort}
+import org.salgo.sorting.{GeneralFunctionalSortingAlgorithm, MergeSort}
 
-class MergeSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: GeneralSortingAlgorithm = MergeSort
+class MergeSortSpec extends GenericFunctionalSortSpec {
+  override def getSortingAlgorithm: GeneralFunctionalSortingAlgorithm = MergeSort
  }

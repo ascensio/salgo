@@ -1,9 +1,9 @@
 package sorting
 
-import org.salgo.sorting.{BubbleSort, GeneralSortingAlgorithm}
+import org.salgo.sorting.{BubbleSort, GeneralFunctionalSortingAlgorithm}
 
-class BubbleSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: GeneralSortingAlgorithm = BubbleSort
+class BubbleSortSpec extends GenericFunctionalSortSpec {
+  override def getSortingAlgorithm: GeneralFunctionalSortingAlgorithm = BubbleSort
 }
 
 

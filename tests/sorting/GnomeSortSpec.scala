@@ -1,7 +1,7 @@
 package sorting
 
-import org.salgo.sorting.{GeneralSortingAlgorithm, GnomeSort}
+import org.salgo.sorting.{GeneralFunctionalSortingAlgorithm, GnomeSort}
 
-class GnomeSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: GeneralSortingAlgorithm = GnomeSort
+class GnomeSortSpec extends GenericFunctionalSortSpec {
+  override def getSortingAlgorithm: GeneralFunctionalSortingAlgorithm = GnomeSort
 }

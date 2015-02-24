@@ -1,7 +1,7 @@
 package sorting
 
-import org.salgo.sorting.{GeneralSortingAlgorithm, OddEvenSort}
+import org.salgo.sorting.{GeneralFunctionalSortingAlgorithm, OddEvenSort}
 
-class OddEvenSortSpec extends GenericSortSpec {
-  override def getSortingAlgorithm: GeneralSortingAlgorithm = OddEvenSort
+class OddEvenSortSpec extends GenericFunctionalSortSpec {
+  override def getSortingAlgorithm: GeneralFunctionalSortingAlgorithm = OddEvenSort
 }
