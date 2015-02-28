@@ -4,6 +4,7 @@ import org.salgo.sequences.BoyerMoore
 import org.scalatest.{FunSuite, Matchers}
 
 class BoyerMooreSpec extends FunSuite with Matchers {
+
   test("Full match") { BoyerMoore.search("test", "test") shouldEqual Seq(0) }
   test("Start match") { BoyerMoore.search("test", "testtext") shouldEqual Seq(0) }
   test("Start + 1 match") { BoyerMoore.search("test", "atest") shouldEqual Seq(1) }
