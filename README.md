@@ -56,6 +56,7 @@ Sequence-Algorithms
 * Alignment (Dynamic Time Wrapping)
 * Shuffling (FisherYates)
 * Matching (Bitap)
+* Searching (Boyer-Moore)
 
 
 Statistics

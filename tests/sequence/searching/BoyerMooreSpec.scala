@@ -1,6 +1,6 @@
-package sequence
+package sequence.searching
 
-import org.salgo.sequences.BoyerMoore
+import org.salgo.sequences.searching.BoyerMoore
 import org.scalatest.{FunSuite, Matchers}
 
 class BoyerMooreSpec extends FunSuite with Matchers {

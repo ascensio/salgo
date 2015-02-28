@@ -1,4 +1,4 @@
-package org.salgo.sequences
+package org.salgo.sequences.searching
 
 import scala.annotation.tailrec
 
