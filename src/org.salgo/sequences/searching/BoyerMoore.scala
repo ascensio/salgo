@@ -2,8 +2,10 @@ package org.salgo.sequences.searching
 
 import scala.annotation.tailrec
 
-object BoyerMoore {
-  def search(pattern: String, text: String, stopAtFirstMatch: Boolean = false, numberOfCharacters: Int = 256) : Seq[Int] = {
+
+
+object BoyerMoore extends StringSearchAlgorithm {
+  override def search(pattern: String, text: String, stopAtFirstMatch: Boolean = false, numberOfCharacters: Int = 256) : Seq[Int] = {
     val shiftBadCharacterMap = this.createBadCharacterShift(pattern, numberOfCharacters)
     val shiftPatternMap = this.createPatternShift(pattern)
     val maxPatternIndex = pattern.length - 1
@@ -33,7 +35,8 @@ object BoyerMoore {
       }
     }
 
-    searchRecursive(0, 0, Seq[Int]())
+    if (maxTextIndex < 0 || maxPatternIndex < 0) Seq.empty[Int]
+    else searchRecursive(0, 0, Seq[Int]())
   }
 
   private def createBadCharacterShift(pattern: String, numberOfCharacters: Int) : Array[Int] = {
