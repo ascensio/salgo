@@ -1,39 +1,35 @@
 package org.salgo.sequences.searching
 
+import scala.annotation.tailrec
+
 object BoyerMooreHorspool extends StringSearchAlgorithm {
   override def search(pattern: String, text: String, stopAtFirstMatch: Boolean = false, numberOfCharacters: Int = 256) : Seq[Int] = {
     val shiftBadCharacterMap = this.createBadCharacterShift(pattern, numberOfCharacters)
-    val maxPatternIndex = pattern.length - 1
-    val maxTextIndex = text.length - 1
+    val patternLength = pattern.length
+    val maxPatternIndex = patternLength - 1
+    val textLength = text.length
+    val maxTextIndex = textLength - 1
 
-    if (maxPatternIndex < 0 || maxTextIndex < 0) Seq.empty[Int]
-    else {
-      var textLength = text.length
-      var patternLength = pattern.length
-      var skip = 0
-      var result = Seq.empty[Int]
-
-      while (textLength - skip >= patternLength) {
-        var i = maxPatternIndex
-        var stopLoop = false
-
-        while (!stopLoop && text(skip + i) == pattern(i)) {
-          if (i == 0) {
-            result = result :+ skip
-            if (stopAtFirstMatch) return result
-            stopLoop = true
-          }
-          else {
-            i -= 1
-          }
-        }
-
-        if (!stopLoop) skip += shiftBadCharacterMap(text(skip + i)) - (maxPatternIndex - i)
-        else skip += patternLength
+    @tailrec
+    def searchRecursive(offset: Int, acc: Seq[Int]): Seq[Int] = {
+      @tailrec
+      def findLastMatchingPatternIndex(pIdx: Int, tIdx: Int): Int = (pIdx - 1, tIdx - 1) match {
+        case (p, t) if p < 0 || t < 0 => p
+        case (p, t) if pattern(p) == text(t) => findLastMatchingPatternIndex(p, t)
+        case (p, t) => p
       }
 
-      result
+      if (textLength - offset < patternLength) acc
+      else {
+        findLastMatchingPatternIndex(maxPatternIndex, offset + maxPatternIndex) match {
+          case pi if pi < 0 => if (stopAtFirstMatch) Seq(offset) else searchRecursive(offset + patternLength, acc :+ offset)
+          case pi => searchRecursive(offset + shiftBadCharacterMap(text(offset + pi)) - (maxPatternIndex - pi), acc)
+        }
+      }
     }
+
+    if (maxPatternIndex < 0 || maxTextIndex < 0) Seq.empty[Int]
+    else searchRecursive(0, Seq.empty[Int])
   }
 
   private def createBadCharacterShift(pattern: String, numberOfCharacters: Int) : Array[Int] = {

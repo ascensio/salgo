@@ -2,8 +2,6 @@ package org.salgo.sequences.searching
 
 import scala.annotation.tailrec
 
-
-
 object BoyerMoore extends StringSearchAlgorithm {
   override def search(pattern: String, text: String, stopAtFirstMatch: Boolean = false, numberOfCharacters: Int = 256) : Seq[Int] = {
     val shiftBadCharacterMap = this.createBadCharacterShift(pattern, numberOfCharacters)
