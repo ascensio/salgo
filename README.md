@@ -48,6 +48,7 @@ Geometry
 * Gift-Wrapping
 * QuickHull
 * Graham Scan
+* Area (Shoelace)
 
 
 Sequence-Algorithms
