@@ -6,3 +6,5 @@ class BoyerMooreSpec extends StringSearchAlgorithmSpec {
  override def getAlgorithm = BoyerMoore
 }
 
+
+

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fada7b5-9615-487e-8163-1c8bc2ced91c" name="Default" comment="BoyerMooreHorspool">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMoore.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMoore.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala" afterPath="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreHorspoolSpec.scala" afterPath="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreHorspoolSpec.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org.salgo/sequences/searching/KnuthMorrisPratt.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/sequence/searching/KnuthMorrisPrattSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala" afterPath="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Sortex.iws" />
@@ -33,31 +34,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BoyerMooreHorspool.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="799">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoyerMoore.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMoore.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoyerMooreSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoyerMooreSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21587302" vertical-offset="0" max-vertical-offset="630">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24444444" vertical-offset="560" max-vertical-offset="1190">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KnuthMorrisPratt.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/KnuthMorrisPratt.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1173">
+              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -98,8 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org.salgo/geometry/hulls/HullScan.scala" />
-        <option value="$PROJECT_DIR$/src/org.salgo/geometry/hulls/HullScan3D.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/geometry/hulls/QuickHull.scala" />
         <option value="$PROJECT_DIR$/tests/geometry/hulls/QuickHullSpec3D.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/geometry/hulls/QuickHull2D.scala" />
@@ -143,12 +142,14 @@
         <option value="$PROJECT_DIR$/src/org.salgo/common/ComplexNumber.scala" />
         <option value="$PROJECT_DIR$/tests/sequence/BoyerMooreSpec.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sequences/BoyerMoore.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/sequence/searching/StringSearchAlgorithmSpec.scala" />
-        <option value="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala" />
         <option value="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreHorspoolSpec.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMoore.scala" />
         <option value="$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala" />
+        <option value="$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala" />
+        <option value="$PROJECT_DIR$/tests/sequence/searching/KnuthMorrisPrattSpec.scala" />
+        <option value="$PROJECT_DIR$/src/org.salgo/sequences/searching/KnuthMorrisPratt.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -886,7 +887,7 @@
       <workItem from="1425019613183" duration="1857000" />
       <workItem from="1425042041256" duration="12000" />
       <workItem from="1425042721911" duration="417000" />
-      <workItem from="1425073398277" duration="42859000" />
+      <workItem from="1425073398277" duration="44535000" />
     </task>
     <task id="LOCAL-00001" summary="Project creation">
       <created>1423635254315</created>
@@ -1116,11 +1117,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425191794185</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="BoyerMooreHorspool">
+      <created>1425193237991</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1425193237991</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350098000" />
+    <option name="totallyTimeSpent" value="351774000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1165,7 +1172,7 @@
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26807564" sideWeight="0.7184" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26807564" sideWeight="0.7184" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19093333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1245,20 +1252,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/SwapSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/StoogeSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org.salgo/sorting/GeneralSortingAlgorithm.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -1569,26 +1562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31687716" vertical-offset="234" max-vertical-offset="1190">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.1.6-sources.jar!/org/scalatest/OutcomeOf.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="992" max-vertical-offset="1649">
           <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="799">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1611,18 +1588,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMooreHorspool.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94603175" vertical-offset="101" max-vertical-offset="799">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/BoyerMoore.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+        <state vertical-scroll-proportion="0.67460316" vertical-offset="0" max-vertical-offset="1258">
           <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/sequence/searching/KnuthMorrisPrattSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13492064" vertical-offset="0" max-vertical-offset="630">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/sequence/searching/BoyerMooreSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21587302" vertical-offset="0" max-vertical-offset="630">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org.salgo/sequences/searching/KnuthMorrisPratt.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1173">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24444444" vertical-offset="560" max-vertical-offset="1190">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
