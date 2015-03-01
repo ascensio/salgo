@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 object BoyerMooreHorspool extends StringSearchAlgorithm {
   override def search(pattern: String, text: String, stopAtFirstMatch: Boolean = false, numberOfCharacters: Int = 256) : Seq[Int] = {
-    val shiftBadCharacterMap = this.createBadCharacterShift(pattern, numberOfCharacters)
+    lazy val shiftBadCharacterMap = this.createBadCharacterShift(pattern, numberOfCharacters)
     val patternLength = pattern.length
     val maxPatternIndex = patternLength - 1
     val textLength = text.length
