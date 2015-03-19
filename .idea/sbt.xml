@@ -4,14 +4,8 @@
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="jdk" value="1.8.0_20" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/project" />
-          </set>
-        </option>
-        <option name="sbtVersion" value="0.13.5" />
+        <option name="jdk" value="1.8" />
+        <option name="resolveSbtClassifiers" value="true" />
       </SbtProjectSettings>
     </option>
   </component>
